@@ -60,7 +60,7 @@ A etapa de prototipação foi realizada por meio de **Wireframes de Baixa Fideli
 
 ## 💻 4. Arquitetura e Tecnologia Front-end (Fase B)
 A implementação da interface segue os padrões estritos do HTML5 e CSS3:
-- **Estilização Global:** [📄 Arquivo CSS Global (`style.css`)](./style.css)
+- **Estilização Global:** [📄 Arquivo CSS Global (`style.css`)](./sitema_De_Clinica_Medica/style.css)
 - **Semântica HTML5:** Utilização de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<aside>` e `<form>`.
 - **CSS Grid Layout:** Macro-estruturação dos contêineres principais (menu lateral vs. área de conteúdo).
 - **CSS Flexbox:** Alinhamento bidimensional de componentes (cards, botões, itens de menu e formulários).
