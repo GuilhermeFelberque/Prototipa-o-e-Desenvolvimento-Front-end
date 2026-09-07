@@ -1,0 +1,91 @@
+DIAGNÓSTICO DE INTEGRAÇÃO FRONT-BACKEND
+Sistema de Clínica Médica - Clínica Vitalis
+
+
+1. Os formulários da interface capturam todos os campos exigidos pelas
+   tabelas do banco de dados atual?
+
+
+Cadastro de Pacientes (cadastro_Paciente.html x tabela pacientes)
+
+Sim, captura tudo. Os campos do formulário (nome, cpf, telefone, data de
+nascimento e endereço) batem exatamente com as colunas da tabela
+pacientes.
+
+
+Cadastro de Médicos (cadastro_Medico.html x tabela medicos)
+
+Quase tudo. O formulário tem nome, cpf, telefone, crm, especialidade e
+endereço, que cobre as colunas da tabela medicos. A única diferença é
+que no banco a especialidade é uma referência para a tabela
+especialidades (id_especialidade), enquanto no formulário hoje o campo
+"Especialidade" é um <select> com as opções escritas direto no HTML.
+Isso vai precisar de uma query pra popular esse select com os dados
+que já existem na tabela especialidades, em vez de deixar fixo.
+
+
+Agendamento (agenda.html x tabela consultas)
+
+Aqui falta campo. O formulário de "Novo Agendamento" só pede paciente,
+médico, data e horário. A tabela consultas também tem os campos status
+e motivo. O status não precisa aparecer no formulário (ele já entra
+como "agendado" automaticamente quando alguém marca uma consulta), mas
+o campo motivo, que existe no banco, não tem input correspondente na
+tela - teria que adicionar um campo de texto pra isso.
+
+Outro ponto: no formulário o paciente é digitado como texto livre, mas
+no banco ele precisa ser o id_paciente (uma referência pra tabela
+pacientes). Então esse campo vai precisar virar uma busca/autocomplete
+que vincula o nome digitado ao paciente já cadastrado, e não só texto
+solto.
+
+
+Prontuário (prontuario.html x tabelas prontuarios e prescricoes)
+
+Parcialmente. Os campos de conduta, balanço hídrico e alergias do
+formulário batem com as colunas da tabela prontuarios. Mas os sinais
+vitais (temperatura, saturação, frequência cardíaca e pressão) hoje
+estão fixos na tela só pra mostrar o layout - eles precisam virar
+campos de input de verdade pra poderem ser salvos no banco.
+
+Na parte de prescrição, o formulário tem medicamento, dosagem e via,
+só que a tabela prescricoes também tem a coluna horario, que não tem
+campo correspondente no formulário. Precisa adicionar esse input.
+
+
+Relatórios (relatorios.html)
+
+Essa tela não cadastra nada, só mostra dados, então não tem o problema
+de "campo faltando". O que ela precisa é de queries de consulta (não
+de inserção), explicado no item 2 abaixo.
+
+
+2. Alguma tela vai exigir a criação de novas queries ou adaptação dos
+   endpoints do backend existente?
+
+
+Sim, em quatro pontos principais:
+
+- Agenda: antes de confirmar um novo agendamento, o sistema precisa
+  rodar uma consulta que verifique se aquele médico já tem uma consulta
+  marcada na mesma data e horário, pra não deixar marcar duas consultas
+  no mesmo horário. Além disso, a grade de horários da semana (que hoje
+  está com dados fixos no HTML) precisa ser preenchida com uma query
+  que busca todas as consultas do médico selecionado, agrupadas por dia
+  e horário.
+
+- Painel/Relatórios: os cards de "Consultas hoje", "Consultas na
+  semana", "Consultas novas" e "Taxa de cancelamento" não são campos
+  que existem prontos no banco - são cálculos. Vai precisar de queries
+  com COUNT, agrupando por data e por status, além de um cálculo de
+  porcentagem pra taxa de cancelamento (consultas canceladas dividido
+  pelo total de consultas do período).
+
+- Cadastro de Médicos: o select de especialidade precisa de uma query
+  simples (SELECT nome FROM especialidades) pra carregar as opções
+  direto do banco, em vez de ficar fixo no HTML.
+
+- Relatório por período/médico: os filtros de período, médico e
+  especialidade da tela de relatórios exigem queries com WHERE e JOIN
+  entre as tabelas consultas, medicos, pacientes e especialidades, já
+  que hoje a tabela mostrada na tela é só um exemplo fixo.
