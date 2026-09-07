@@ -3,6 +3,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![UI/UX](https://img.shields.io/badge/UI%2FUX-Design-7B2CBF?style=for-the-badge)
 
 
 > Sistema web intuitivo, semântico e responsivo para controle de pacientes, agendamentos, médicos, prontuários e relatórios da **Clínica Vitalis**.
