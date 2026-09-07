@@ -16,7 +16,7 @@ O **Sistema Clínica Vitalis** é uma aplicação voltada para a gestão e autom
 
 ## 🎯 2. Módulos do Sistema
 O sistema é estruturado nos seguintes módulos fundamentais:
-- 👥 **[Cadastro de Pacientes](./cadastro_Paciente.html):** Gestão de dados pessoais, contatos e histórico.
+- 👥 **[Cadastro de Pacientes](./sitema_De_Clinica_Medica/cadastro_Paciente.html):** Gestão de dados pessoais, contatos e histórico.
 - 👨‍⚕️ **[Cadastro de Médicos](./cadastro_Medico.html):** Registro de profissionais, CRM e especialidades.
 - 📅 **[Agenda e Agendamento](./agenda.html):** Controle de horários e datas com calendário e grade semanal.
 - 📋 **[Prontuário Eletrônico](./prontuario.html):** Anotações clínicas, sinais vitais e histórico de consultas.
