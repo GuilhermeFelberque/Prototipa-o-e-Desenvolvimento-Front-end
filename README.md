@@ -15,13 +15,13 @@ O **Sistema Clínica Vitalis** é uma aplicação voltada para a gestão e autom
 ---
 
 ## 🎯 2. Módulos do Sistema
-O sistema é estruturado em 6 módulos fundamentais:
-- 👥 **Cadastro de Pacientes:** Gestão de dados pessoais, contatos e histórico.
-- 👨‍⚕️ **Cadastro de Médicos:** Registro de profissionais, CRM e especialidades.
-- 📅 **Agenda e Agendamento:** Controle de horários e datas com calendário e grade semanal.
-- 📋 **Prontuário Eletrônico:** Anotações clínicas, sinais vitais e histórico de consultas.
-- 💊 **Prescrição Médica:** Emissão de receitas e controle de medicamentos.
-- 📊 **Relatórios Clínicos:** Visualização de dados agregados e consultas por período.
+O sistema é estruturado nos seguintes módulos fundamentais:
+- 👥 **[Cadastro de Pacientes](./cadastro_Paciente.html):** Gestão de dados pessoais, contatos e histórico.
+- 👨‍⚕️ **[Cadastro de Médicos](./cadastro_Medico.html):** Registro de profissionais, CRM e especialidades.
+- 📅 **[Agenda e Agendamento](./agenda.html):** Controle de horários e datas com calendário e grade semanal.
+- 📋 **[Prontuário Eletrônico](./prontuario.html):** Anotações clínicas, sinais vitais e histórico de consultas.
+- 📊 **[Relatórios e Painel](./relatorios.html):** Visualização de dados agregados e consultas por período.
+- 🏠 **[Página Inicial / Dashboard](./index.html):** Visão geral do sistema.
 
 ---
 
@@ -33,26 +33,26 @@ A etapa de prototipação foi realizada por meio de **Wireframes de Baixa Fideli
 
 ### 📐 Detalhamento das Telas Prototipadas:
 
-1. **📊 Painel / Dashboard (Tela Inicial):**
+1. **📊 [Painel / Dashboard](./index.html):**
    - **Indicadores Rápidos (Cards):** Métricas de consultas do dia, da semana, novos agendamentos e taxa de cancelamento.
    - **Gráficos e Listagens:** Gráfico de distribuição de consultas semanais e tabela com os últimos agendamentos.
    - **Navegação Lateral:** Menu fixo com acesso direto a todas as seções do sistema.
 
-2. **👥 Cadastro e Gestão de Pacientes (CRUD):**
+2. **👥 [Cadastro e Gestão de Pacientes](./cadastro_Paciente.html):**
    - Tabela central com contagem de registros, busca dinâmica por nome e listagem de dados (Nome, CPF, Telefone, Endereço).
    - Botões de ação direta para **Editar** e **Excluir**, além do atalho para **Novo Cadastro**.
 
-3. **👨‍⚕️ Cadastro e Gestão de Médicos (CRUD):**
+3. **👨‍⚕️ [Cadastro e Gestão de Médicos](./cadastro_Medico.html):**
    - Estrutura semelhante à tela de pacientes, agregando os campos de **CRM** e **Especialidade Médica**.
    - Permite a busca e manutenção contínua do corpo clínico pela recepção.
 
-4. **📋 Prontuário Eletrônico (Tela Clínica):**
+4. **📋 [Prontuário Eletrônico](./prontuario.html):**
    - **Cabeçalho Clínico:** Identificação do paciente, dados demográficos, alergias e tipo sanguíneo.
    - **Atendimento em Tempo Real:** Campo para anotações/diagnóstico e emissão de receita/prescrição médica com botão de impressão rápida.
    - **Sinais Vitais:** Bloco para registro e monitoramento de Pressão Arterial, Frequência Cardíaca, Temperatura e Saturação ($SpO_2$).
    - **Histórico:** Painel lateral com o histórico das consultas anteriores.
 
-5. **📅 Agenda e Agendamento de Consultas (Fluxo Principal):**
+5. **📅 [Agenda e Agendamento de Consultas](./agenda.html):**
    - **Visão em Grade Semanal:** Cruzamento de horários (linhas) com os dias da semana (colunas).
    - **Filtros e Legenda:** Seleção por Médico/Especialidade e sistema de status colorido (Livre, Agendado, Bloqueado, Em Atendimento).
 
@@ -60,6 +60,7 @@ A etapa de prototipação foi realizada por meio de **Wireframes de Baixa Fideli
 
 ## 💻 4. Arquitetura e Tecnologia Front-end (Fase B)
 A implementação da interface segue os padrões estritos do HTML5 e CSS3:
+- **Estilização Global:** [📄 Arquivo CSS Global (`style.css`)](./style.css)
 - **Semântica HTML5:** Utilização de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<aside>` e `<form>`.
 - **CSS Grid Layout:** Macro-estruturação dos contêineres principais (menu lateral vs. área de conteúdo).
 - **CSS Flexbox:** Alinhamento bidimensional de componentes (cards, botões, itens de menu e formulários).
@@ -69,6 +70,8 @@ A implementação da interface segue os padrões estritos do HTML5 e CSS3:
 
 ## 🗄️ 5. Banco de Dados (MySQL)
 O banco de dados relacional `clinica_vitalis` foi modelado para suportar todas as operações da clínica.
+
+> 🗃️ **Script de Criação:** [📄 Clique aqui para visualizar o código SQL (`Sistema_Clinica_Medica.sql`)](./Sistema_Clinica_Medica.sql)
 
 ### 📐 Estrutura de Tabelas e Entidades:
 * `especialidades`: Registro das áreas médicas.
@@ -81,6 +84,8 @@ O banco de dados relacional `clinica_vitalis` foi modelado para suportar todas a
 ---
 
 ## 🔍 6. Diagnóstico de Integração (Fase C: Front & Backend)
+
+> 📝 **Documento Completo:** [📄 Diagnóstico da Fase C (`diagnostico_fase_c.txt`)](./diagnostico_fase_c.txt)
 
 ### 1. Cobertura dos Campos
 Os formulários desenhados na UI capturam integralmente todos os campos obrigatórios e opcionais exigidos pelas tabelas do banco de dados (`pacientes`, `medicos`, `consultas`, `prontuarios` e `prescricoes`).
