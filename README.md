@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 1. Sobre o Projeto
+## 📖 1. Sobre o Projet
 O **Sistema Clínica Vitalis** é uma aplicação voltada para a gestão e automação do atendimento médico. O projeto integra uma modelagem de banco de dados relacional rigorosa a uma interface web intuitiva, desenvolvida com foco em acessibilidade, semântica HTML5 e layouts responsivos.
 
 ---
