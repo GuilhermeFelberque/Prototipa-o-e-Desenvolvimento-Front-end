@@ -85,7 +85,7 @@ O banco de dados relacional `clinica_vitalis` foi modelado para suportar todas a
 
 ## 🔍 6. Diagnóstico de Integração (Fase C: Front & Backend)
 
-> 📝 **Documento Completo:** [📄 Diagnóstico da Fase C (`diagnostico_fase_c.txt`)](./sitema_De_Clinica_Medica/Diagnostico_Integracao_Front_Backend_Clinica_Vitalis.pdf)
+> 📝 **Documento Completo:** [📄 Diagnóstico da Fase C (`Diagnostico_Integracao_Front_Backend_Clinica_Vitalis.pdf`)](./Diagnostico_Integracao_Front_Backend_Clinica_Vitalis.pdf)
 
 ### 1. Cobertura dos Campos
 Os formulários desenhados na UI capturam integralmente todos os campos obrigatórios e opcionais exigidos pelas tabelas do banco de dados (`pacientes`, `medicos`, `consultas`, `prontuarios` e `prescricoes`).
