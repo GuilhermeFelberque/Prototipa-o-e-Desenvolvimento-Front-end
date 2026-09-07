@@ -33,26 +33,26 @@ A etapa de prototipação foi realizada por meio de **Wireframes de Baixa Fideli
 
 ### 📐 Detalhamento das Telas Prototipadas:
 
-1. **📊 [Painel / Dashboard](./index.html):**
+1. **📊 Painel / Dashboard:**
    - **Indicadores Rápidos (Cards):** Métricas de consultas do dia, da semana, novos agendamentos e taxa de cancelamento.
    - **Gráficos e Listagens:** Gráfico de distribuição de consultas semanais e tabela com os últimos agendamentos.
    - **Navegação Lateral:** Menu fixo com acesso direto a todas as seções do sistema.
 
-2. **👥 [Cadastro e Gestão de Pacientes](./cadastro_Paciente.html):**
+2. **👥 Cadastro e Gestão de Pacientes:**
    - Tabela central com contagem de registros, busca dinâmica por nome e listagem de dados (Nome, CPF, Telefone, Endereço).
    - Botões de ação direta para **Editar** e **Excluir**, além do atalho para **Novo Cadastro**.
 
-3. **👨‍⚕️ [Cadastro e Gestão de Médicos](./cadastro_Medico.html):**
+3. **👨‍⚕️ Cadastro e Gestão de Médicos:**
    - Estrutura semelhante à tela de pacientes, agregando os campos de **CRM** e **Especialidade Médica**.
    - Permite a busca e manutenção contínua do corpo clínico pela recepção.
 
-4. **📋 [Prontuário Eletrônico](./prontuario.html):**
+4. **📋 Prontuário Eletrônico:**
    - **Cabeçalho Clínico:** Identificação do paciente, dados demográficos, alergias e tipo sanguíneo.
    - **Atendimento em Tempo Real:** Campo para anotações/diagnóstico e emissão de receita/prescrição médica com botão de impressão rápida.
    - **Sinais Vitais:** Bloco para registro e monitoramento de Pressão Arterial, Frequência Cardíaca, Temperatura e Saturação ($SpO_2$).
    - **Histórico:** Painel lateral com o histórico das consultas anteriores.
 
-5. **📅 [Agenda e Agendamento de Consultas](./agenda.html):**
+5. **📅 Agenda e Agendamento de Consultas:**
    - **Visão em Grade Semanal:** Cruzamento de horários (linhas) com os dias da semana (colunas).
    - **Filtros e Legenda:** Seleção por Médico/Especialidade e sistema de status colorido (Livre, Agendado, Bloqueado, Em Atendimento).
 
