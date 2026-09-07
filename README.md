@@ -71,7 +71,7 @@ A implementação da interface segue os padrões estritos do HTML5 e CSS3:
 ## 🗄️ 5. Banco de Dados (MySQL)
 O banco de dados relacional `clinica_vitalis` foi modelado para suportar todas as operações da clínica.
 
-> 🗃️ **Script de Criação:** [📄 Clique aqui para visualizar o código SQL (`Sistema_Clinica_Medica.sql`)](./Sistema_Clinica_Medica.sql)
+> 🗃️ **Script de Criação:** [📄 Clique aqui para visualizar o código SQL (`Sistema_Clinica_Medica.sql`)](./sitema_De_Clinica_Medica/Sistema_Clinica_Medica.sql)
 
 ### 📐 Estrutura de Tabelas e Entidades:
 * `especialidades`: Registro das áreas médicas.
@@ -85,7 +85,7 @@ O banco de dados relacional `clinica_vitalis` foi modelado para suportar todas a
 
 ## 🔍 6. Diagnóstico de Integração (Fase C: Front & Backend)
 
-> 📝 **Documento Completo:** [📄 Diagnóstico da Fase C (`diagnostico_fase_c.txt`)](./diagnostico_fase_c.txt)
+> 📝 **Documento Completo:** [📄 Diagnóstico da Fase C (`diagnostico_fase_c.txt`)](./sitema_De_Clinica_Medica/diagnostico_fase_c.txt)
 
 ### 1. Cobertura dos Campos
 Os formulários desenhados na UI capturam integralmente todos os campos obrigatórios e opcionais exigidos pelas tabelas do banco de dados (`pacientes`, `medicos`, `consultas`, `prontuarios` e `prescricoes`).
